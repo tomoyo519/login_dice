@@ -67,6 +67,7 @@ class _LogInState extends State<LogIn> {
                               ButtonTheme(
                                 minWidth: 100.0,
                               height: 50.0,
+                              textTheme: ,
                              
                               child: ElevatedButton(
                              
