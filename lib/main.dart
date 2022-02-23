@@ -66,7 +66,17 @@ class _LogInState extends State<LogIn> {
                                 InputDecoration(labelText: 'Enter Password'),
                             keyboardType: TextInputType.text,
                             obscureText: true,
-                          )
+                          ),
+                          SizedBox(height: 40.0),
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              primary: Colors.black87,
+                            ),
+                            child: Icon(Icons.arrow_forward,
+                                color: Colors.white, size: 35.0),
+                            onPressed: () {},
+                          ),
                         ]),
                       )))
             ],
