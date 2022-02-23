@@ -19,6 +19,8 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+  TextEditingController controller = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,39 +51,24 @@ class _LogInState extends State<LogIn> {
                               labelStyle: TextStyle(
                                   color: Colors.teal, fontSize: 15.0))),
                       child: Container(
-                          padding: EdgeInsets.all(40.0),
-                          child: Column(
-                            children: <Widget>[
-                              TextField(
-                                decoration: InputDecoration(
-                                  labelText: 'Enter dice',
-                                ),
-                                keyboardType: TextInputType.emailAddress,
-                              ),
-                              TextField(
-                                decoration: InputDecoration(
-                                    labelText: 'Enter Password'),
-                                keyboardType: TextInputType.text,
-                                obscureText: true,
-                              )
-                              ButtonTheme(
-                                minWidth: 100.0,
-                              height: 50.0,
-                              textTheme: ,
-                             
-                              child: ElevatedButton(
-                             
-                              child: Icon(
-
-                            Icons.arrow_forward,
-                            color: Colors.white,
-                            size:35.0),
-                              
-
-                                onPressed: (){}))
-                            ]
-                            ,
-                          ))))
+                        padding: EdgeInsets.all(40.0),
+                        child: Column(children: <Widget>[
+                          TextField(
+                            controller: controller,
+                            decoration: InputDecoration(
+                              labelText: 'Enter dice',
+                            ),
+                            keyboardType: TextInputType.emailAddress,
+                          ),
+                          TextField(
+                            controller: controller2,
+                            decoration:
+                                InputDecoration(labelText: 'Enter Password'),
+                            keyboardType: TextInputType.text,
+                            obscureText: true,
+                          )
+                        ]),
+                      )))
             ],
           ),
         ));
